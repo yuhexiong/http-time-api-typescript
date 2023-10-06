@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: Http-Time Server API
+  description: 
+servers:
+  - url: https://localhost:5000
+paths:
+  /time:
+    get:
+      description: get current time in certain timezone
+      parameters:
+        - in: query
+          name: timezone
+          schema:
+            type: string
+          required: false
+      responses:
+        "200":
+          description: Successful operation 
+    post:
+      description: get current time in certain timezone
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                timezone:
+                  type: string
+      responses:
+        "200":
+          description: Successful operation 
+  /timezone:
+    put:
+      description: reset timezone
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                timezone:
+                  type: string
+      responses:
+        "200":
+          description: Successful operation 
+    delete:
+      description: remove timezone
+      responses:
+        "200":
+          description: Successful operation 
