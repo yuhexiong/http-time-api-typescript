@@ -1,4 +1,10 @@
 # http time API
+A server can see time in timezone.  
+
+## Overview
+
+- Language: TypeScript
+- Web FrameWork: Express
 
 ## Install modules
 
